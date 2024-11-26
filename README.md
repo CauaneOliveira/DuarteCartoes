@@ -13,7 +13,7 @@ ENTREGA 1:
 ## Tecnologias Utilizadas
 <div style="display: inline_block"><br>
  <img align="center" alt="Python" height="30" width="40" src="https://raw.githubusercontent.com/devicons/devicon/master/icons/python/python-original.svg">
- <img align="center" alt="Mysql" height="30" width="40" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mysql/mysql-original.svg">
+ <img align="center" alt="SQLite" height="30" width="40" src="https://www.svgrepo.com/show/374094/sqlite.svg">
  <img align="center" alt="swagger" height="30" width="40" src="https://www.svgrepo.com/show/374111/swagger.svg">
 </div>
 
@@ -27,4 +27,4 @@ ENTREGA 1:
 </div>
 
 ## Recursos
-- Interface Figma: 
+- Interface Figma: https://www.figma.com/design/xUxpOQTuR318lJmiE0WX1N/Duarte-Cart%C3%B5es
