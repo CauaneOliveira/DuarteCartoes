@@ -11,8 +11,8 @@ class Style:
             'bg_frame' : "#E7E7E7",  # Cor de fundo do frame - Quase Branco
             'fg' : "#77a075",  # Cor para botões - Verde Claro
             'hover' : "#3c743c",  # Cor ao passar o mouse - Verde Escuro
-            'fg_2' : "#cdcdcd", # Cor para botões - Cinza escuro
-            'hover_2' : "#a0a0a0", # Cor ao passar o mouse - Cinza Claro
+            'fg_2' : "#a0a0a0", # Cor para botões - Cinza escuro
+            'hover_2' : "#cdcdcd", # Cor ao passar o mouse - Cinza Claro
             'fg_red' : "#c30000", #Cor do botao - Vermelho
             'hover_red':"#6f0000", #Cor ao passar o mouse - Vermelho claro
             'bg_frame2': "#ACABAB" #Cor para titulo de frame - Cinza Escuro

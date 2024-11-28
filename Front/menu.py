@@ -35,12 +35,12 @@ class Menu:
 
         self.menu_btn = []
         for i, (text, command) in enumerate(buttons):
-            button = ctk.CTkButton(central_frame,text=text,font=("Arial", 18, "bold"),width=170, height=40,text_color="white",fg_color=Style.color('fg'),hover_color=Style.color('hover'), corner_radius=3,command=lambda b=i: self.mudanca_color(b))
-            button.grid(row=0, column=i, padx=5)
+            button = ctk.CTkButton(central_frame,text=text,font=("Arial", 18, "bold"),width=170, height=40,text_color="white",fg_color=Style.color('fg'),hover_color=Style.color('hover'), corner_radius=10,command=lambda b=i: self.mudanca_color(b))
+            button.grid(row=0, column=i)
             self.menu_btn.append((button, command))
 
-        btn_Pedido = ctk.CTkButton(frame,text="Novo Pedido",font=("Arial", 18, "bold"),width=150, height=40,text_color="white",fg_color=Style.color('fg'),hover_color=Style.color('hover'),corner_radius=5,command=self.novo_pedido)
-        btn_Pedido.grid(row=0, column=2, padx=10, pady=10, sticky="e")
+        btn_Pedido = ctk.CTkButton(frame,text="Novo Pedido",font=("Arial", 18, "bold"),width=150, height=40,text_color="white",fg_color=Style.color('fg'),hover_color=Style.color('hover'),corner_radius=10,command=self.novo_pedido)
+        btn_Pedido.grid(row=0, column=2, padx=35, pady=10, sticky="e")
 
 
         self.mudanca_color(0)
