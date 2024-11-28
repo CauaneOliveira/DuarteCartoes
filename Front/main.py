@@ -1,23 +1,21 @@
 import customtkinter as ctk
 
+from style import Style
 from menu import Menu
-from telas.tela_home import telaHome
+
 
 class Main:
     def __init__(self,root):
-        self.menu = Menu(root,self)
-        if self.menu:
-            telaHome(root)
+        Menu(root)
+        
         
 if __name__ == "__main__":
-    jan = ctk.CTk()
-    
+    root = ctk.CTk()
+    root.title("Duarte Cartões")
     largura_janela = 1300
     altura_janela = 640
 
-    jan.geometry(f"{largura_janela}x{altura_janela}")
-
-
-    Main(jan)
-
-    jan.mainloop()
+    Style.centralizar_janela(root, largura_janela, altura_janela)
+    
+    Main(root)
+    root.mainloop()

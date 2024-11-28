@@ -28,3 +28,13 @@ class Style:
       
         imgs={'img_icon_producao':abrir_img("img\\icon_producao.png",(40, 40))}
         return imgs.get(img_nome)
+    
+    def centralizar_janela(root, largura, altura):
+        
+        tela_largura = root.winfo_screenwidth()
+        tela_altura = root.winfo_screenheight()
+
+        x = (tela_largura // 2) - (largura // 2)
+        y = (tela_altura // 2) - (altura // 2)
+
+        root.geometry(f"{largura}x{altura}+{x}+{y}")
