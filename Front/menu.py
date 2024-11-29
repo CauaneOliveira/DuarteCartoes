@@ -44,8 +44,7 @@ class Menu:
         btn_Pedido.grid(row=0, column=2, padx=35, pady=10, sticky="e")
 
 
-        #self.mudanca_color(0)
-        self.mudanca_color(1)
+        self.mudanca_color(0)
 
     def mudanca_color(self, btn_i):
         
