@@ -4,6 +4,7 @@ from style import Style
 from telas.tela_home import telaHome
 from telas.tela_pedido import telaPedido
 from telas.tela_producao import telaProducao
+from telas.tela_cliente import telaCliente
 
 
 class Menu:
@@ -45,7 +46,7 @@ class Menu:
 
 
         #self.mudanca_color(0)
-        self.mudanca_color(1)
+        self.mudanca_color(2)
 
     def mudanca_color(self, btn_i):
         
@@ -78,7 +79,11 @@ class Menu:
         telaProducao(self.frame_inferior,self)
 
     def chama_cliente(self):
-        print("Indo para a tela Cliente")
+        self.dest_frame()
+        self.root.rowconfigure(1,weight=1)
+        self.frame_inferior = ctk.CTkFrame(self.root,fg_color=Style.color('bg'))
+        self.frame_inferior.grid(row=1,column=0,sticky="nsew")
+        telaCliente(self.frame_inferior,self)
 
     def chama_pedido(self):
 
