@@ -3,10 +3,11 @@ import customtkinter as ctk
 from style import Style
 from telas.tela_home import telaHome
 from telas.tela_pedido import telaPedido
+from telas.tela_producao import telaProducao
 
 
 class Menu:
-    def __init__(self, root):
+    def __init__(self, root,):
         self.root = root
         self.frame_inferior = None
 
@@ -14,7 +15,7 @@ class Menu:
 
         buttons = [
             ("Home", self.chamar_home),
-            ("Produção", self.chama_produção),
+            ("Produção", self.chama_producao),
             ("Cliente", self.chama_cliente),
             ("Pedido", self.chama_pedido),
             ("Relatório", self.chama_relatorio),
@@ -43,7 +44,8 @@ class Menu:
         btn_Pedido.grid(row=0, column=2, padx=35, pady=10, sticky="e")
 
 
-        self.mudanca_color(0)
+        #self.mudanca_color(0)
+        self.mudanca_color(1)
 
     def mudanca_color(self, btn_i):
         
@@ -68,8 +70,12 @@ class Menu:
         self.frame_inferior.grid(row=1, column=0, sticky="nsew")
         telaHome(self.frame_inferior)
 
-    def chama_produção(self):
-        print("Indo para a tela Produção")
+    def chama_producao(self):
+        self.dest_frame()
+        self.root.rowconfigure(1,weight=1)
+        self.frame_inferior = ctk.CTkFrame(self.root,fg_color=Style.color('bg'))
+        self.frame_inferior.grid(row=1,column=0,sticky="nsew")
+        telaProducao(self.frame_inferior,self)
 
     def chama_cliente(self):
         print("Indo para a tela Cliente")
