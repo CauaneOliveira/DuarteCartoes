@@ -26,7 +26,9 @@ class Style:
             img = ctk.CTkImage(Image.open(caminho), size=size)  
             return img  
       
-        imgs={'img_icon_producao':abrir_img("img\\icon_producao.png",(40, 40))}
+        imgs={'img_icon_produto':abrir_img("img\\icon_produto.png",(40, 40)),
+              'img_icon_pendencias':abrir_img("img\\icon_pendencias.png",(40, 40)),
+              'img_icon_grafica':abrir_img("img\\icon_grafica.png",(40, 40))}
         return imgs.get(img_nome)
     
     def centralizar_janela(root, largura, altura):

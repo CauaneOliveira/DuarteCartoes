@@ -46,7 +46,7 @@ class Menu:
 
 
         #self.mudanca_color(0)
-        self.mudanca_color(2)
+        self.mudanca_color(3)
 
     def mudanca_color(self, btn_i):
         
