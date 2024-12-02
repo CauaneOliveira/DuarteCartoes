@@ -42,7 +42,7 @@ class Menu:
             self.menu_btn.append((button, command))
 
         btn_Pedido = ctk.CTkButton(frame,text="Novo Pedido",font=("Arial", 18, "bold"),width=150, height=40,text_color="white",fg_color=Style.color('fg'),hover_color=Style.color('hover'),corner_radius=10,command=self.novo_pedido)
-        btn_Pedido.grid(row=0, column=2, padx=35, pady=10, sticky="e")
+        btn_Pedido.grid(row=0, column=2, padx=40, pady=10, sticky="e")
 
 
         #self.mudanca_color(0)
