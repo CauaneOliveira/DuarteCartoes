@@ -4,6 +4,7 @@ from style import Style
 from telas.tela_home import telaHome
 from telas.tela_pedido import telaPedido
 from telas.tela_producao import telaProducao
+from telas.tela_cliente import telaCliente
 
 
 class Menu:
@@ -41,10 +42,11 @@ class Menu:
             self.menu_btn.append((button, command))
 
         btn_Pedido = ctk.CTkButton(frame,text="Novo Pedido",font=("Arial", 18, "bold"),width=150, height=40,text_color="white",fg_color=Style.color('fg'),hover_color=Style.color('hover'),corner_radius=10,command=self.novo_pedido)
-        btn_Pedido.grid(row=0, column=2, padx=35, pady=10, sticky="e")
+        btn_Pedido.grid(row=0, column=2, padx=40, pady=10, sticky="e")
 
 
-        self.mudanca_color(0)
+        #self.mudanca_color(0)
+        self.mudanca_color(2)
 
     def mudanca_color(self, btn_i):
         
@@ -77,7 +79,11 @@ class Menu:
         telaProducao(self.frame_inferior,self)
 
     def chama_cliente(self):
-        print("Indo para a tela Cliente")
+        self.dest_frame()
+        self.root.rowconfigure(1,weight=1)
+        self.frame_inferior = ctk.CTkFrame(self.root,fg_color=Style.color('bg'))
+        self.frame_inferior.grid(row=1,column=0,sticky="nsew")
+        telaCliente(self.frame_inferior,self)
 
     def chama_pedido(self):
 
